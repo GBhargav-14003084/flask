@@ -1,8 +1,9 @@
-from flask import Flask, escape, request
-
+from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    name = request.args.get("name", "World")
-    return f'Hey, {escape(name)}!'
+def hello_world():
+   return 'Hey World'
+
+if __name__ == '__main__':
+   app.run()
